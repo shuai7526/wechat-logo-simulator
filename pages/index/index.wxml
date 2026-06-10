@@ -1,0 +1,54 @@
+<view class="container">
+  <swiper class="preview-swiper" circular indicator-dots indicator-active-color="#07C160" indicator-color="rgba(255,255,255,0.3)">
+    
+    <swiper-item class="scene-item">
+      <view class="scene-title">1. 下拉任务栏 (暗色背景边缘验证)</view>
+      <view class="taskbar-bg">
+        <view class="task-item">
+          <image class="task-logo" src="{{logoSrc}}" mode="aspectFill" wx:if="{{logoSrc}}"></image>
+          <view class="task-logo-placeholder" wx:else></view>
+          <text class="task-name">{{appName}}</text>
+        </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item class="scene-item">
+      <view class="scene-title">2. 发现页列表 (浅色背景反差验证)</view>
+      <view class="discover-bg">
+        <view class="discover-item">
+          <image class="discover-logo" src="{{logoSrc}}" mode="aspectFill" wx:if="{{logoSrc}}"></image>
+          <view class="discover-logo-placeholder" wx:else></view>
+          <text class="discover-name">{{appName}}</text>
+          <view class="discover-arrow"></view>
+        </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item class="scene-item">
+      <view class="scene-title">3. 分享卡片 (超小尺寸辨识度验证)</view>
+      <view class="chat-bg">
+        <view class="chat-card">
+          <view class="card-header">
+            <image class="card-logo" src="{{logoSrc}}" mode="aspectFill" wx:if="{{logoSrc}}"></image>
+            <view class="card-logo-placeholder" wx:else></view>
+            <text class="card-app-name">{{appName}}</text>
+          </view>
+          <view class="card-title">这个小程序很不错，快来看看吧！</view>
+          <view class="card-cover">
+            <text style="color: #999; font-size: 24rpx;">分享图展示区</text>
+          </view>
+          <view class="card-footer">
+            <view class="mp-icon"></view>
+            <text>小程序</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+
+  </swiper>
+
+  <view class="action-bar">
+    <input class="name-input" value="{{appName}}" bindinput="onNameChange" placeholder="输入小程序名称" />
+    <button class="upload-btn" bindtap="chooseLogo">上传看效果</button>
+  </view>
+</view>

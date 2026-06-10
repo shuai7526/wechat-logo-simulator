@@ -1,0 +1,156 @@
+/* 全局设定 */
+page {
+  background-color: #121212; /* 模拟器的整体黑底 */
+  height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.preview-swiper {
+  flex: 1;
+  width: 100%;
+}
+
+.scene-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh; /* 距离顶部的距离 */
+}
+
+.scene-title {
+  font-size: 30rpx;
+  color: #07C160;
+  font-weight: bold;
+  margin-bottom: 60rpx;
+  letter-spacing: 2rpx;
+}
+
+/* ==================== 场景一：下拉任务栏 ==================== */
+/* ==================== 场景一：下拉任务栏 ==================== */
+.taskbar-bg {
+  width: 100vw;
+  height: 400rpx;
+  /* 换成截图里提取的深紫色毛玻璃渐变 */
+  background: linear-gradient(180deg, #2B2A38 0%, #45435A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-item { display: flex; flex-direction: column; align-items: center; }
+.task-logo, .task-logo-placeholder {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background-color: #444; /* 占位色 */
+  border: 1px solid rgba(255,255,255,0.05); /* 微弱的白边防止纯黑Logo融于背景 */
+}
+.task-name {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #a3a3a3;
+  max-width: 140rpx; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+}
+
+/* ==================== 场景二：发现页列表 ==================== */
+.discover-bg {
+  width: 100vw;
+  height: 400rpx;
+  background-color: #F7F7F7; /* 微信发现页灰底 */
+  display: flex;
+  align-items: center;
+}
+.discover-item {
+  width: 100%; height: 140rpx;
+  background-color: #FFFFFF;
+  display: flex; align-items: center;
+  padding: 0 40rpx;
+}
+.discover-logo, .discover-logo-placeholder {
+  width: 47px; height: 47px;
+  border-radius: 50%;
+  background-color: #EFEFEF;
+}
+.discover-name {
+  margin-left: 24rpx;
+  font-size: 34rpx;
+  color: #333333;
+  flex: 1;
+}
+.discover-arrow {
+  width: 16rpx; height: 16rpx;
+  border-top: 4rpx solid #C7C7CC; border-right: 4rpx solid #C7C7CC;
+  transform: rotate(45deg);
+}
+
+/* ==================== 场景三：单聊/群聊卡片 ==================== */
+.chat-bg {
+  width: 100vw; height: 550rpx;
+  background-color: #EDEDED; /* 微信聊天背景色 */
+  display: flex; align-items: center; justify-content: center;
+}
+.chat-card {
+  width: 500rpx;
+  background-color: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+}
+.card-header {
+  display: flex; align-items: center; margin-bottom: 16rpx;
+}
+.card-logo, .card-logo-placeholder {
+  width: 20px; height: 20px; /* 极小尺寸 */
+  border-radius: 50%;
+  background-color: #EFEFEF;
+}
+.card-app-name {
+  margin-left: 12rpx; font-size: 24rpx; color: #888888;
+}
+.card-title {
+  font-size: 32rpx; color: #333333;
+  margin-bottom: 20rpx;
+  line-height: 1.4;
+}
+.card-cover {
+  width: 100%; height: 260rpx;
+  background-color: #F8F8F8;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8rpx;
+  margin-bottom: 16rpx;
+}
+.card-footer {
+  display: flex; align-items: center; border-top: 1px solid #F0F0F0; padding-top: 16rpx;
+}
+.mp-icon {
+  width: 24rpx; height: 24rpx; border-radius: 50%; border: 4rpx solid #07C160;
+  margin-right: 8rpx;
+}
+.card-footer text { font-size: 20rpx; color: #b2b2b2; }
+
+/* ==================== 底部固定操作栏 ==================== */
+.action-bar {
+  position: absolute; bottom: 0; width: 100%; height: 180rpx;
+  background-color: #1e1e1e;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40rpx; box-sizing: border-box;
+  padding-bottom: 40rpx; /* 粗略适配底部 */
+  border-top: 1px solid #333;
+  z-index: 999;
+}
+.name-input {
+  flex: 1; height: 88rpx;
+  background-color: #2c2c2c; color: #ffffff;
+  border-radius: 12rpx; padding: 0 30rpx; font-size: 30rpx; margin-right: 30rpx;
+}
+.upload-btn {
+  width: 260rpx !important; height: 88rpx; line-height: 88rpx;
+  background-color: #07C160; color: #ffffff;
+  font-size: 30rpx; font-weight: 500; border-radius: 12rpx;
+  padding: 0; margin: 0;
+}
